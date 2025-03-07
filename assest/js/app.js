@@ -1,8 +1,8 @@
-(function() {
-    var base = document.createElement('base');
-    base.href = window.location.origin + "/Bave2.0/";
-    document.head.appendChild(base);
-  })();
+// (function() {
+//     var base = document.createElement('base');
+//     base.href = window.location.origin + "/Bave2.0/";
+//     document.head.appendChild(base);
+//   })();
 const ham =document.querySelector('.ham');
 const nav =document.querySelector('nav');
 ham.addEventListener('click', ()=>{
@@ -227,23 +227,44 @@ window.addEventListener("resize", updateIndicator);
 updateIndicator();
 
 
-function changeActiveTab(target){
-  let url = window.location.pathname;
-  console.log(url);
-  if(url != '/profile.html' && url != '/Conversations.html'){
-    window.location.href = `/profile.html?tab=${target}`
-    return
+
+function changeActiveTab(target) {
+  let currentUrl = window.location.href; // Get current full URL
+  let baseUrl = window.location.origin + window.location.pathname; // Base URL without query params
+
+  // Check if already on profile.html
+  if (!baseUrl.includes("profile.html")) {
+    window.location.href = `profile.html?tab=${target}`;
+    return;
   }
-  const targetTab = target //"tab2"; // Set the tab to activate
 
-    // Remove 'active' class from all buttons and tab panes
-    document.querySelectorAll(".tab-button").forEach(button => button.classList.remove("active"));
-    document.querySelectorAll(".tab-pane").forEach(tab => tab.classList.remove("active"));
+  // Update the active tab when already on profile.html
+  const targetTab = target;
 
-    // Add 'active' class to the selected tab button and pane
-    document.querySelector(`.tab-button[data-tab="${targetTab}"]`).classList.add("active");
-    document.getElementById(targetTab).classList.add("active");
+  // Remove 'active' class from all buttons and tab panes
+  document.querySelectorAll(".tab-button").forEach(button => button.classList.remove("active"));
+  document.querySelectorAll(".tab-pane").forEach(tab => tab.classList.remove("active"));
+
+  // Add 'active' class to the selected tab button and pane
+  document.querySelector(`.tab-button[data-tab="${targetTab}"]`)?.classList.add("active");
+  document.getElementById(targetTab)?.classList.add("active");
+
+  // Update the URL without reloading
+  history.pushState(null, "", `profile.html?tab=${target}`);
 }
+
+// Function to activate the tab based on the URL parameter
+function activateTabFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const tab = params.get("tab");
+  if (tab) {
+    changeActiveTab(tab);
+  }
+}
+
+// Ensure the correct tab is active when profile.html loads
+window.onload = activateTabFromUrl;
+
 function converActiveTab(target) {
   // Remove 'active' class from all buttons and tab panes
   document.querySelectorAll(".tab-button").forEach(button => button.classList.remove("active"));
