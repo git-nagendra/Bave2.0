@@ -13,7 +13,7 @@ img {
 .Resources,
 .Upcoming ,
 .book_banner{
-    background: url('/assest/images/books/book-banner.png');
+    background: url('../../assest/images/books/book-banner.png');
     padding: 7rem 1rem;
     display: flex;
     justify-content: center;
@@ -22,13 +22,13 @@ img {
     position: relative;
 }
 .Upcoming {
-    background: url('/assest/images/Upcoming.jpeg');
+    background: url('../../assest/images/Upcoming.jpeg');
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .Resources{
-    background: url('/assest/images/bavebg.jpeg');
+    background: url('../../assest/images/bavebg.jpeg');
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
