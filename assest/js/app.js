@@ -1,3 +1,8 @@
+(function() {
+    var base = document.createElement('base');
+    base.href = window.location.origin + "/Bave2.0/";
+    document.head.appendChild(base);
+  })();
 const ham =document.querySelector('.ham');
 const nav =document.querySelector('nav');
 ham.addEventListener('click', ()=>{
