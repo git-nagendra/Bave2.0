@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bave.inc Booking</title>
+    <link rel="stylesheet" href="./assest/css/service.css" />
+    <link rel="stylesheet" href="./assest/css/style.css" />
+    <!-- style css -->
+    <link rel="stylesheet" href="./assest/css/booking.css" />
+    <!-- Link Swiper's CSS -->
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- font-awesome css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <!-- style css -->
+  </head>
+
+  <body>
+    <div class="header page py-3">
+      <div class="container d-flex align-items-center justify-content-between">
+        <div class="logo_wrapper d-flex align-items-center">
+          <a href="index.html">
+            <div class="logo">
+              <img src="./assest/images/logo.png" alt="logo" />
+            </div>
+          </a>
+          <h5 class="logo_text m-0 ms-2">Bave.<span>INC</span></h5>
+        </div>
+        <div class="ham">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav>
+          <ul>
+            <li class="list-group-item">
+              <a href="booking-listing.html" class="active">Products</a>
+            </li>
+            <li class="list-group-item position-relative">
+              <a href="#" class="services-link">
+                Services
+                <span><i class="fa-solid fa-chevron-down"></i></span>
+              </a>
+              <div class="sub_menu">
+                <ul>
+                  <li class="list-group-item">
+                    <a href="service.html">Consultation</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="educational-resources.html">Educational Resources</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="Events.html">My Events</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <a href="Conversations.html">Membership</a>
+            </li>
+            <li class="list-group-item">
+              <a href="Contact.html">Contact Us</a>
+            </li>
+            <li class="list-group-item">
+              <img
+                src="./assest/images/cart.png"
+                style="height: 23px; width: 26px; cursor: pointer"
+                alt="cart"
+              />
+            </li>
+            <li class="list-group-item position-relative">
+              <a
+                href=""
+                class="text-decoration-none d-flex align-items-center "
+                style="letter-spacing: 0; color: #656565"
+              >
+                <div
+                  class="user_icon me-1 d-flex align-items-center justify-content-center"
+                >
+                  <p class="p-0 m-0 text-white" style="font-weight: 600">NP</p>
+                </div>
+                Vincent Artim
+                <span class="ms-1"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </a>
+              <div class="sub_menu pt-3 user_sub">
+                <div class="d-flex align-items-center">
+                  <div
+                    class="user_icon user_drop me-1 d-flex align-items-center justify-content-center"
+                  >
+                    <p class="p-0 m-0 text-white" style="font-weight: 600">
+                      NP
+                    </p>
+                  </div>
+                  <div class="user_name">
+                    <p class="m-0 p-0">Vincent Artim</p>
+                    <span
+                      class="badge badge-soft-primary px-2 py-1"
+                      style="background: #cecece; color: #0058fa"
+                      >Pro
+                    </span>
+                    <p class="m-0 p-0">vincentart@mail.com</p>
+                  </div>
+                </div>
+                <div class="line my-3"></div>
+                <div class="user_list">
+                  <ul>
+                    <li onclick="changeActiveTab('tab1')" id="externalButton1">
+                      <a href="javascript:void(0);"
+                        ><img
+                          src="./assest/images/settings.png"
+                          style="margin-right: 10px; height: 18px; width: 18px"
+                          alt=""
+                        />Profile Settings</a
+                      >
+                    </li>
+                    <li onclick="changeActiveTab('tab2')" id="externalButton2">
+                      <a href="javascript:void(0);"
+                        ><img
+                          src="./assest/images/Union.png"
+                          style="margin-right: 10px; height: 15px; width: 15px"
+                          alt=""
+                        />My Bookings</a
+                      >
+                    </li>
+                    <li onclick="changeActiveTab('tab3')" id="externalButton3">
+                      <a href="javascript:void(0);">
+                        <img
+                          src="./assest/images/Subtract.png"
+                          style="margin-right: 10px; height: 16px; width: 16px"
+                          alt=""
+                        />My Orders</a
+                      >
+                    </li>
+                    <li>
+                      <a href="">
+                        <img
+                          src="./assest/images/sign out.png"
+                          style="margin-right: 10px; height: 20px; width: 20px"
+                          alt=""
+                        />
+                        Sign Out</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <section class="">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-12">
+            <div class="tab-container">
+              <div class="tab-buttons Profile-btn">
+                <button class="tab-button Profile-tab active" onclick="changeActiveTab('tab1')"  data-tab="tab1">
+                 <span class="me-1"><i class="fa-solid fa-user"></i></span> My Profile
+                </button>
+                <button class="tab-button Profile-tab" onclick="changeActiveTab('tab2')"  data-tab="tab2">
+                  <span class="me-2"><i class="fa-solid fa-calendar-days"></i></span>My Bookings
+                </button>
+                <button class="tab-button Profile-tab" onclick="changeActiveTab('tab3')"  data-tab="tab3">
+                 <span class="me-1"><i class="fas fa-shopping-bag" ></i></span> My Orders
+                </button>
+              </div>
+            </div>
+            <div class="tab-content">
+              <div id="tab1" class="tab-pane active">
+                <div class="row">
+                  <div
+                    class="d-flex flex-wrap align-items-center py-3 justify-content-between"
+                  >
+                    <div class="update">
+                      <h5>Your Profile</h5>
+                      <p class="text_muted">
+                        Please update your profile settings here
+                      </p>
+                    </div>
+                    <button class="schedule-btn" class="btn">
+                      Alumni
+                      <span class="ms-1"
+                        ><img
+                          src="./assest/images/astar.png"
+                          style="height: 17px; width: 17px"
+                          alt=""
+                      /></span>
+                    </button>
+                  </div>
+                  <div class="line line_1 mt-3 mb-4"></div>
+                  <form action="">
+                    <div class="row mb-4">
+                      <div class="col-lg-3">
+                        <label for="nameInput" class="form-label"
+                          >Username</label
+                        >
+                      </div>
+                      <div class="col-lg-9">
+                        <div class="input-group">
+                          <span class="input-group-text envelope">
+                            <i class="fa-regular fa-user"></i>
+                          </span>
+                          <input
+                            type="text"
+                            class="profile-control"
+                            id="nameInput"
+                            placeholder="Vincent Artim"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line line_1 my-3 mb-4"></div>
+                    <div class="row mb-4">
+                      <div class="col-lg-3">
+                        <label for="websiteUrl" class="form-label">Email</label>
+                      </div>
+                      <div class="col-lg-9">
+                        <div class="input-group">
+                          <span class="input-group-text envelope">
+                            <i class="fa-solid fa-envelope"></i>
+                          </span>
+                          <input
+                            type="email"
+                            class="profile-control"
+                            id="websiteUrl"
+                            placeholder="vincentart@mail.com"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line line_1 my-3 mb-4"></div>
+                    <div class="row mb-4">
+                      <div class="col-lg-3">
+                        <label for="dateInput" class="form-label"
+                          >Phone Number</label
+                        >
+                      </div>
+                      <div class="col-lg-9">
+                        <div class="input-group">
+                          <span
+                            class="input-group-text"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <img
+                              src="./assest/images/country.png"
+                              style="
+                                height: 20px;
+                                width: 20px;
+                                border-radius: 50%;
+                              "
+                              alt=""
+                            />
+                            <i
+                              class="fa-solid fa-chevron-down ms-2"
+                              style="font-size: 14px"
+                            ></i>
+                          </span>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a class="dropdown-item" href="#">9792898939</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">9792898939</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">9792898939</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"> 9792898939</a>
+                            </li>
+                          </ul>
+                          <input
+                            type="text"
+                            class="profile-control con"
+                            value="(158) 008-9987"
+                            id="nameInput"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line line_1 my-3 mb-4"></div>
+                    <div class="row mb-4">
+                      <div class="col-lg-3">
+                        <label for="timeInput" class="form-label"
+                          >Profile Picture</label
+                        >
+                      </div>
+                      <div class="col-lg-9 d-flex align-items-center">
+                        <div class="profile_user_image">
+                          <img src="./assest/images/Avatar.png" alt="" />
+                        </div>
+                        <div class="ms-2 d-flex">
+                          <button class="schedule-btn Edit py-2" class="btn">
+                            Edit
+                          </button>
+                          <button
+                            class="schedule-btn Delete py-2 ms-2"
+                            class="btn"
+                          >
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line line_1 my-3 mb-4"></div>
+                    <div class="row mb-4">
+                      <div class="col-lg-3">
+                        <label for="leaveemails" class="form-label"
+                          >Membership</label
+                        >
+                      </div>
+                      <div class="col-lg-9 d-flex flex-wrap align-items-center">
+                        <div class="Active">
+                          <h6 class="m-0 p-0">Active Plan</h6>
+                          <p>Alumni Membership</p>
+                        </div>
+                        <button class="schedule-btn mx-auto" class="btn">
+                          <span class="me-1"
+                            ><img
+                              src="./assest/images/astar.png"
+                              style="height: 17px; width: 17px"
+                              alt=""
+                          /></span>
+                          Renew Subscription Plan
+                        </button>
+                      </div>
+                    </div>
+                    <div class="line line_1 my-3 mb-3"></div>
+                    <div class="text-end d-flex align-items-center justify-content-end">
+                      <button class="schedule-btn Edit py-2" class="btn">
+                        Cancel<span class="ms-2"><i class="fa-solid fa-xmark" style="font-size: 14px;"></i></span>
+                      </button>
+                      <button class="schedule-btn  py-2 ms-2" class="btn">
+                        Save <span class="ms-1"><i class="fa-solid fa-check" style="font-size: 14px;"></i></span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div id="tab2" class="tab-pane">
+                <div class="row">
+                  <div
+                      class=" pt-3 pb-2 "
+                    >
+                      <div class="update">
+                        <h5>My Bookings</h5>
+                        <p class="text_muted">
+                            All the bookings you have made are listed here
+                        </p>
+                      </div>
+                    </div>
+                </div>
+                 <div class="row">
+                  <div class="tabs-container">
+                    <!-- Tab Navigation with ARIA roles -->
+                    <div class="tabs-nav" role="tablist">
+                      <button class="tab active" role="tab" aria-selected="true" tabindex="0" data-tab="1" id="tab1">Event Bookings</button>
+                      <button class="tab" role="tab" aria-selected="false" tabindex="0" data-tab="2" id="tab2">Consultation Bookings</button>
+                      <!-- <button class="tab" role="tab" aria-selected="false" tabindex="0" data-tab="3" id="tab3">Tab 3</button> -->
+                      <div class="tab-indicator"></div>
+                    </div>
+                  
+                    <!-- Tab Panels with ARIA roles -->
+                    <div class="tabs-content">
+                      <div class="tab-content pt-0  active" role="tabpanel" aria-labelledby="tab1" data-tab="1">
+                        <div class="row">
+                          <div class="table-responsive product">
+                            <div>
+                              <div class="input-container d-flex my-3">
+                                <input type="search" class="search-input" value="" name="s" placeholder="Search entire website..." />
+                                <button type="submit" class="search-submit ms-2" name="submit">Search</i></button>
+                              </div><!-- input-container -->
+                            </div>
+                              <table class="table align-middle mb-0">
+                                  <thead class="">
+                                      <tr>
+                                          <th scope="col">My Bookings</th>
+                                          <th scope="col">Status</th>
+                                          <th scope="col">Date/Time</th>
+                                          <th scope="col">Amount</th>
+                                          <th scope="col"></th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr>
+                                          <td class="py-4 table_image_wrapper">
+                                            <div class="d-flex align-items-center">
+                                              <div class="table_image">
+                                                <img src="./assest/images/Content Cards.png" alt="">
+                                              </div>
+                                              <div class="p-2 pe-3">
+                                                <p class="p-0 m-0">Public Speaking Event for the Mental health awareness</p>
+                                              </div>
+                                            </div>
+                                          </td>
+                                          <td class="py-4 text-Pending">Pending</td>
+                                          <td class="py-4">19-02-2025 <span>11:00PM</span></td>
+                                          <td class="py-4">
+                                              <div class="d-flex gap-2 align-items-center">
+                                                  <div class="flex-shrink-0">
+                                                      <img src="assets/images/users/avatar-3.jpg" alt="" class="avatar-xs rounded-circle" />
+                                                  </div>
+                                                  <div class="flex-grow-1">
+                                                      Jordan Kennedy
+                                                  </div>
+                                              </div>
+                                          </td>
+                                          <td class="py-4">
+                                            <button class="schedule-btn not_active py-2 ms-2" class="btn">
+                                              Join Live
+                                            </button>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                        <td class="py-4 table_image_wrapper">
+                                          <div class="d-flex align-items-center">
+                                            <div class="table_image">
+                                              <img src="./assest/images/Content Cards.png" alt="">
+                                            </div>
+                                            <div class="p-2 pe-3">
+                                              <p class="p-0 m-0">Public Speaking Event for the Mental health awareness</p>
+                                            </div>
+                                          </div>
+                                        </td>
+                                        <td class="py-4 text-Confirmed">Confirmed</td>
+                                        <td class="py-4">19-02-2025 <span>11:00PM</span></td>
+                                        <td class="py-4">
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <div class="flex-shrink-0">
+                                                    <img src="assets/images/users/avatar-3.jpg" alt="" class="avatar-xs rounded-circle" />
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    Jordan Kennedy
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="py-4">
+                                          <button class="schedule-btn  py-2 ms-2" class="btn">
+                                            Join Live
+                                          </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="py-4 table_image_wrapper">
+                                        <div class="d-flex align-items-center">
+                                          <div class="table_image">
+                                            <img src="./assest/images/Content Cards.png" alt="">
+                                          </div>
+                                          <div class="p-2 pe-3">
+                                            <p class="p-0 m-0">Public Speaking Event for the Mental health awareness</p>
+                                          </div>
+                                        </div>
+                                      </td>
+                                      <td class="py-4 text-Cancelled">Cancelled</td>
+                                      <td class="py-4">19-02-2025 <span>11:00PM</span></td>
+                                      <td class="py-4">
+                                          <div class="d-flex gap-2 align-items-center">
+                                              <div class="flex-shrink-0">
+                                                  <img src="assets/images/users/avatar-3.jpg" alt="" class="avatar-xs rounded-circle" />
+                                              </div>
+                                              <div class="flex-grow-1">
+                                                  Jordan Kennedy
+                                              </div>
+                                          </div>
+                                      </td>
+                                      <td class="py-4">
+                                        <button class="schedule-btn  py-2 ms-2" class="btn">
+                                          Join Live
+                                        </button>
+                                      </td>
+                                  </tr>
+                                  </tbody>
+                              </table>
+                              <!-- end table -->
+                          </div>
+                        </div>  
+                        
+                      </div>
+                      <div class="tab-content pt-0" role="tabpanel" aria-labelledby="tab2" data-tab="2">
+                        <div class="row">
+                          <div class="table-responsive product">
+                            <div>
+                              <div class="input-container my-3">
+                                <input type="search" class="search-input" value="" name="s" placeholder="Search entire website..." />
+                                <button type="submit" class="search-submit ms-2" name="submit">Search</i></button>
+                              </div><!-- input-container -->
+                            </div>
+                              <table class="table align-middle mb-0">
+                                  <thead class="">
+                                      <tr>
+                                          <th scope="col">My Bookings</th>
+                                          <th scope="col">Status</th>
+                                          <th scope="col">Date/Time</th>
+                                          <th scope="col">Amount</th>
+                                          <th scope="col"></th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr>
+                                        <td class="py-4 table_image_wrapper">
+                                          <div class="d-flex align-items-center">
+                                            <div class="table_image">
+                                              <img src="./assest/images/Content Cards.png" alt="">
+                                            </div>
+                                            <div class="p-2 pe-3">
+                                              <p class="p-0 m-0">Public Speaking Event for the Mental health awareness</p>
+                                            </div>
+                                          </div>
+                                        </td>
+                                        <td class="py-4 text-Confirmed">Confirmed</td>
+                                        <td class="py-4">19-02-2025 <span>11:00PM</span></td>
+                                        <td class="py-4">
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <div class="flex-shrink-0">
+                                                    <img src="assets/images/users/avatar-3.jpg" alt="" class="avatar-xs rounded-circle" />
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    Jordan Kennedy
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="py-4">
+                                          <button class="schedule-btn  py-2 ms-2" class="btn" data-bs-toggle="modal"
+                                          data-bs-target="#staticBackdrop">
+                                            Join Live
+                                          </button>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td class="py-4 table_image_wrapper">
+                                          <div class="d-flex align-items-center">
+                                            <div class="table_image">
+                                              <img src="./assest/images/Content Cards.png" alt="">
+                                            </div>
+                                            <div class="p-2 pe-3">
+                                              <p class="p-0 m-0">Public Speaking Event for the Mental health awareness</p>
+                                            </div>
+                                          </div>
+                                        </td>
+                                        <td class="py-4 text-Confirmed">Confirmed</td>
+                                        <td class="py-4">19-02-2025 <span>11:00PM</span></td>
+                                        <td class="py-4">
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <div class="flex-shrink-0">
+                                                    <img src="assets/images/users/avatar-3.jpg" alt="" class="avatar-xs rounded-circle" />
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    Jordan Kennedy
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="py-4">
+                                          <button class="schedule-btn  py-2 ms-2" class="btn" data-bs-toggle="modal"
+                                          data-bs-target="#staticBackdrop">
+                                            Join Live
+                                          </button>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td class="py-4 table_image_wrapper">
+                                          <div class="d-flex align-items-center">
+                                            <div class="table_image">
+                                              <img src="./assest/images/Content Cards.png" alt="">
+                                            </div>
+                                            <div class="p-2 pe-3">
+                                              <p class="p-0 m-0">Public Speaking Event for the Mental health awareness</p>
+                                            </div>
+                                          </div>
+                                        </td>
+                                        <td class="py-4 text-Confirmed">Confirmed</td>
+                                        <td class="py-4">19-02-2025 <span>11:00PM</span></td>
+                                        <td class="py-4">
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <div class="flex-shrink-0">
+                                                    <img src="assets/images/users/avatar-3.jpg" alt="" class="avatar-xs rounded-circle" />
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    Jordan Kennedy
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="py-4">
+                                          <button class="schedule-btn  py-2 ms-2" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                            Join Live
+                                          </button>
+                                        </td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                              <!-- end table -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-content pt-0" role="tabpanel" aria-labelledby="tab3" data-tab="3">
+                        <p>This is content for Tab 3.</p>
+                        <p><a href="#">Link 3A</a></p>
+                        <p><a href="#">Link 3B</a></p>
+                      </div>
+                    </div>
+                  </div>
+                    <!-- end table responsive -->
+                  </div>
+              </div>
+              <div id="tab3" class="tab-pane">
+                <div class="row py-3">
+                  <div
+                    class="d-flex"
+                  >
+                    <div class="update">
+                      <h5>My Orders</h5>
+                      <p class="text_muted">
+                        All the orders you have made are listed here
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <a href="tracking-status.html" class="remove_a_style">
+                        <div class="card-body p-2 product">
+                          <div class="d-flex gap-2  flex-lg-row flex-column ">
+                            <div class="d-flex align-items-center">
+                              <div class="order_image">
+                                <img src="./assest/images/book2.png" alt="">
+                              </div>
+                              <div class="ms-3 me-2 order_text" style="width: 550px;" >
+                                <h6>
+                                  Understanding Mental Illness:
+                                    Guide to Mental Health
+                                </h6>
+                                <p class="mb-2 Tahereh">By Tahereh Mafi</p>
+                                <p class="Qty">Qty: <span> 1 </span></p>
+                              </div>
+                            </div>
+                            <div class="d-flex w-100 align-items-start justify-content-between">
+                              <div class="status mt-lg-4 mt-1">
+                                <p class="p-0 text_muted m-0">Status</p>
+                                <p class="p-0 m-0">In - Transit</p>
+                              </div>
+                              <div class=" mt-lg-4 mt-1">
+                                <p class="m-0 text_muted p-0">Delivery Expected</p>
+                                <p class="m-0 text_muted p-0">19-02-2025 </p>
+                              </div>
+                              <div class=" pe-3 mt-lg-4 mt-1">
+                                <p class="m-0 text_muted p-0">Amount Paid</p>
+                                <p class="m-0 text_muted p-0">$ 90.00</p>
+                              </div>
+                             </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-12">
+                      <a href="tracking-status.html" class="remove_a_style">
+                        <div class="card-body p-2 product">
+                          <div class="d-flex gap-2  flex-lg-row flex-column ">
+                            <div class="d-flex align-items-center">
+                              <div class="order_image">
+                                <img src="./assest/images/book2.png" alt="">
+                              </div>
+                              <div class="ms-3 me-2 order_text" style="width: 550px;" >
+                                <h6>
+                                  Understanding Mental Illness:
+                                    Guide to Mental Health
+                                </h6>
+                                <p class="mb-2 Tahereh">By Tahereh Mafi</p>
+                                <p class="Qty">Qty: <span> 1 </span></p>
+                              </div>
+                            </div>
+                            <div class="d-flex w-100 align-items-start justify-content-between">
+                              <div class="status mt-lg-4 mt-1">
+                                <p class="p-0 text_muted m-0">Status</p>
+                                <p class="p-0 m-0">In - Transit</p>
+                              </div>
+                              <div class=" mt-lg-4 mt-1">
+                                <p class="m-0 text_muted p-0">Delivery Expected</p>
+                                <p class="m-0 text_muted p-0">19-02-2025 </p>
+                              </div>
+                              <div class=" pe-3 mt-lg-4 mt-1">
+                                <p class="m-0 text_muted p-0">Amount Paid</p>
+                                <p class="m-0 text_muted p-0">$ 90.00</p>
+                              </div>
+                             </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-12">
+                      <a href="tracking-status.html" class="remove_a_style">
+                        <div class="card-body p-2 product">
+                          <div class="d-flex gap-2  flex-lg-row flex-column ">
+                            <div class="d-flex align-items-center">
+                              <div class="order_image">
+                                <img src="./assest/images/book2.png" alt="">
+                              </div>
+                              <div class="ms-3 me-2 order_text" style="width: 550px;" >
+                                <h6>
+                                  Understanding Mental Illness:
+                                    Guide to Mental Health
+                                </h6>
+                                <p class="mb-2 Tahereh">By Tahereh Mafi</p>
+                                <p class="Qty">Qty: <span> 1 </span></p>
+                              </div>
+                            </div>
+                            <div class="d-flex w-100 align-items-start justify-content-between">
+                              <div class="status mt-lg-4 mt-1">
+                                <p class="p-0 text_muted m-0">Status</p>
+                                <p class="p-0 m-0">In - Transit</p>
+                              </div>
+                              <div class=" mt-lg-4 mt-1">
+                                <p class="m-0 text_muted p-0">Delivery Expected</p>
+                                <p class="m-0 text_muted p-0">19-02-2025 </p>
+                              </div>
+                              <div class=" pe-3 mt-lg-4 mt-1">
+                                <p class="m-0 text_muted p-0">Amount Paid</p>
+                                <p class="m-0 text_muted p-0">$ 90.00</p>
+                              </div>
+                             </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer_bg">
+      <div class="container pt-5">
+        <div class="row g-3">
+          <div class="col-lg-6 col-xl-4">
+            <div class="logo_wrapper d-flex align-items-center">
+              <div class="logo">
+                <img src="./assest/images/logo.png" alt="logo" />
+              </div>
+              <h5 class="logo_text m-0 ms-2 text-white">
+                Bave.<span>INC</span>
+              </h5>
+            </div>
+            <p class="mb-0 mt-4 pe-3">
+              Discover everything we offer to support your journey—browse our
+              curated book collection, book a personalized consultation, or
+              participate in exclusive events
+            </p>
+            <div class="social_icon mt-4 gap-3 d-flex">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-square-twitter"></i>
+              <i class="fa-brands fa-square-instagram"></i>
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xl-2">
+            <h5 class="footer_h">Quick link</h5>
+            <span
+              ><img
+                src="./assest/images/Group 5487.png"
+                style="height: 8px; width: 40px"
+                alt=""
+            /></span>
+            <ul class="footer_list mt-2">
+              <li><a href="Contact.html"><span class="me-2"><i class="fa-solid fa-angle-right"></i></span>Contact Us</a></li>
+              <li><a href="#"><span class="me-2"><i class="fa-solid fa-angle-right"></i></span>About us</a></li>
+              <li><a href="questions.html"><span class="me-2"><i class="fa-solid fa-angle-right"></i></span>FAQ</a></li>
+              <li><a href="Conversations.html"><span class="me-2"><i class="fa-solid fa-angle-right"></i></span>Membership </a> </li>
+            </ul>
+          </div>
+          <div class="col-lg-6 col-xl-3">
+            <h5 class="footer_h">Educational Resources</h5>
+            <span
+              ><img
+                src="./assest/images/Group 5487.png"
+                style="height: 8px; width: 40px"
+                alt=""
+            /></span>
+            <ul class="footer_list mt-2">
+              <li class="d-flex">
+                <a href=""></a>
+                <span class="me-2"><i class="fa-solid fa-angle-right"></i></span
+                >Brain Training Programs Article & videos <br />8 Feb, 2025
+              </li>
+              <li class="d-flex">
+                <a href="#"></a
+                ><span class="me-2"
+                  ><i class="fa-solid fa-angle-right"></i></span
+                >Mental Health Recovery Tips<br />
+                8 Feb, 2025
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6 col-xl-3">
+            <h5 class="footer_h">Contact</h5>
+            <span
+              ><img
+                src="./assest/images/Group 5487.png"
+                style="height: 8px; width: 40px"
+                alt=""
+            /></span>
+
+            <ul class="footer_list mt-2">
+              <li class="d-flex">
+                <span class="me-3"
+                  ><i
+                    class="fa-solid fa-location-dot"
+                    style="font-size: 30px"
+                  ></i
+                ></span>
+                44 Danwers, NY City, USA, 70-102
+              </li>
+              <li class="d-flex mt-3">
+                <span class="me-3"
+                  ><span
+                    ><i
+                      class="fa-solid fa-envelope"
+                      style="font-size: 26px"
+                    ></i></span></span
+                >brandoninfo@demo.com
+              </li>
+              <li class="d-flex mt-3">
+                <span class="me-3"
+                  ><i
+                    class="fa-solid fa-phone"
+                    style="font-size: 26px"
+                  ></i></span
+                >01+000-000-000
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row Copyright py-3 mt-5">
+          <div class="col-12 d-flex justify-content-center align-items-center">
+            <p class="m-0 p-0">
+              CBAVE.INC Copyright @ 2025 All rights reserved
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer_img">
+        <img src="./assest/images/footer.png" alt="" />
+      </div>
+    </footer>
+    <!-- app js -->
+    <script src="./assest/js/app.js"></script>
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const activeTab = params.get("tab");
+      changeActiveTab(activeTab)
+    </script>
+  </body>
+</html>
+
+
+
+<!-- Modal -->
+<div
+  class="modal fade"id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content join_app d-flex flex-row">
+      <div class="mobile_app d-flex align-items-center justify-content-center">
+        <div class="bobile_app_image">
+          <img src="./assest/images/group-phone.png" alt="">
+        </div>
+      </div>
+      <div class=" mobile_app_rite d-flex align-items-center justify-content-center flex-column">
+        <h5>Install the App to Join this <span style="color: #0058fa;">LIVE</span></h5>
+        <div class=" gap-2 mt-sm-4 mt-2 d-flex flex-sm-row flex-column">
+          <div class="app">
+            <img src="./assest/images/PngItem_1144050 3.png" alt="" />
+          </div>
+          <div class="app">
+            <img src="./assest/images/toppng 2.png" alt="" />
+          </div>
+        </div>
+        <button type="button" class="btn-close app-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+</div>

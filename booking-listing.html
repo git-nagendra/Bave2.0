@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bave.inc Booking</title>
+  
+  <link rel="stylesheet" href="./assest/css/style.css" />
+  <!-- style css -->
+  <link rel="stylesheet" href="./assest/css/booking.css" />
+  <!-- Link Swiper's CSS -->
+  <!-- bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- font-awesome css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    referrerpolicy="no-referrer" />
+  <!-- style css -->
+</head>
+
+<body>
+  <div class="header page py-3">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="logo_wrapper d-flex align-items-center">
+        <a href="index.html">
+          <div class="logo">
+            <img src="./assest/images/logo.png" alt="logo" />
+          </div>
+        </a>
+        <h5 class="logo_text m-0 ms-2">Bave.<span>INC</span></h5>
+      </div>
+      <div class="ham">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav>
+        <ul>
+            <li class="list-group-item">
+                <a href="booking-listing.html" class="active">Products</a>
+            </li>
+            <li class="list-group-item position-relative">
+                <a href="#" class="services-link">
+                    Services 
+                    <span><i class="fa-solid fa-chevron-down"></i></span>
+                </a>
+                <div class="sub_menu">
+                    <ul>
+                        <li class="list-group-item">
+                            <a href="service.html">Consultation</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="educational-resources.html">Educational Resources</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="Events.html">My Events</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <a href="Conversations.html">Membership</a>
+            </li>
+            <li class="list-group-item">
+                <a href="Contact.html">Contact Us</a>
+            </li>
+            <li class="list-group-item">
+                <img src="./assest/images/cart.png" style="height: 23px; width: 26px; cursor: pointer" alt="cart">
+            </li>
+            <li class="list-group-item position-relative">
+              <a href="" class="text-decoration-none d-flex align-items-center" style="letter-spacing: 0; color: #656565;">
+                <div class="user_icon me-1 d-flex align-items-center justify-content-center">
+                  <p class="p-0 m-0 text-white" style="font-weight: 600;">NP</p>
+                </div>
+                Vincent Artim <span class="ms-1"><i class="fa-solid fa-chevron-down"></i></span>
+              </a>
+              <div class="sub_menu pt-3 user_sub">
+                <a href="javascript:void(0)" class="remove_a_style">
+                  <div class="d-flex align-items-center">
+                    <div class="user_icon user_drop me-1 d-flex align-items-center justify-content-center">
+                      <p class="p-0 m-0 text-white" style="font-weight: 600;">NP</p>
+                    </div>
+                    <div class="user_name">
+                      <p class="m-0 p-0">Vincent Artim</p><span class="badge badge-soft-primary px-2 py-1" style="background: #CECECE; color: #0058FA;"
+                      >Pro
+                    </span>
+                      <p class="m-0 p-0 text_muted">vincentart@mail.com</p>
+                    </div>
+                  </div>
+                </a>
+                <div class="line my-3"></div>
+                <div class="user_list">
+                  <ul>
+                    <li onclick="changeActiveTab('tab1')"><a href="javascript:void(0)"><img src="./assest/images/settings.png" style="margin-right: 10px; height: 18px; width: 18px;" alt="">Profile Settings</a></li>
+                    <li onclick="changeActiveTab('tab2')"><a href="javascript:void(0)"><img src="./assest/images/Union.png" style="margin-right: 10px; height: 15px; width: 15px;" alt="">My Bookings</a></li>
+                    <li onclick="changeActiveTab('tab3')"><a href="javascript:void(0)"> <img src="./assest/images/Subtract.png" style="margin-right: 10px; height: 16px; width: 16px;" alt="">My Orders</a></li>
+                    <li><a href="javascript:void(0)">
+                      <img src="./assest/images/sign out.png" style="margin-right: 10px; height: 20px; width: 20px;" alt="">
+                      Sign Out</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+        </ul>
+    </nav>
+    </div>
+  </div>
+  <div class="book_banner">
+    <div class="text-center content">
+      <h1>Books That Inspire Your Next Chapter</h1>
+      <p>Explore a curated collection of books that inspire, educate, and empower. From personal development to tales of
+        resilience, find the perfect read to fuel your journey."</p>
+    </div>
+  </div>
+  <section class="py-5 book-sec">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 book-filter">
+          <ul class="book-filter-ul">
+            <li class="b-title">
+              Books by Age
+            </li>
+            <li class="active">
+              <a href="#">Teens</a>
+            </li>
+            <li>
+              <a href="#">Adults
+              </a>
+            </li>
+            <li>
+              <a href="#">Seniors</a>
+            </li>
+          </ul>
+          <div class="_divider"></div>
+          <ul class="book-filter-ul">
+            <li class="b-title">
+              Recovery Stage
+            </li>
+            <li>
+              <a href="#">Beginning</a>
+            </li>
+            <li>
+              <a href="#">In Progress
+              </a>
+            </li>
+            <li>
+              <a href="#">Fully Recovered</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-9">
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="book_card p-2">
+                <div class="book_image">
+                  <a href="/booking-details.html">
+
+                    <img src="./assest/images/books/book0.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="_author">John Strass</div>
+                <div class="_title">Understanding Me..</div>
+                <div class="_price">$19.00</div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="book_card p-2">
+                <div class="book_image">
+                  <a href="/booking-details.html">
+
+                    <img src="./assest/images/books/book0.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="_author">Anthony Doerr</div>
+                <div class="_title">Teens Mental Heal...</div>
+                <div class="_price">$21.98</div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="book_card p-2">
+                <div class="book_image">
+                  <a href="/booking-details.html">
+
+                    <img src="./assest/images/books/book1.png" alt="" />
+                  </a>
+                </div>
+                <div class="_author">John Strass</div>
+                <div class="_title">Young Mental hea...</div>
+                <div class="_price">$19.00</div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="book_card p-2">
+                <div class="book_image">
+                  <a href="/booking-details.html">
+
+                    <img src="./assest/images/books/book2.png" alt="" />
+                  </a>
+                </div>
+                <div class="_author">Jay Shetty</div>
+                <div class="_title">Journey to Recove...</div>
+                <div class="_price">$21.98</div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="book_card p-2">
+                <div class="book_image">
+                  <a href="/booking-details.html">
+                    <img src="./assest/images/books/book4.png" alt="" />
+                  </a>
+                </div>
+                <div class="_author">John Strass</div>
+                <div class="_title">Like a Summer</div>
+                <div class="_price">$19.00</div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="book_card p-2">
+                <div class="book_image">
+                  <a href="/booking-details.html">
+
+                    <img src="./assest/images/books/book0.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="_author">Anthony Doerr</div>
+                <div class="_title">Think Like a Monk</div>
+                <div class="_price">$21.98</div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="book_card p-2">
+                <div class="book_image">
+                  <a href="/booking-details.html">
+
+                    <img src="./assest/images/books/book1.png" alt="" />
+                  </a>
+                </div>
+                <div class="_author">John Strass</div>
+                <div class="_title">Young Mental hea...</div>
+                <div class="_price">$19.00</div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="book_card p-2">
+                <div class="book_image">
+                  <a href="/booking-details.html">
+
+                    <img src="./assest/images/books/book2.png" alt="" />
+                  </a>
+                </div>
+                <div class="_author">Jay Shetty</div>
+                <div class="_title">Journey to Recove...</div>
+                <div class="_price">$21.98</div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="book_card p-2">
+                <div class="book_image">
+                  <a href="/booking-details.html">
+                    <img src="./assest/images/books/book4.png" alt="" />
+                  </a>
+                </div>
+                <div class="_author">John Strass</div>
+                <div class="_title">Like a Summer</div>
+                <div class="_price">$19.00</div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="book_card p-2">
+                <div class="book_image">
+                  <a href="/booking-details.html">
+
+                    <img src="./assest/images/books/book0.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="_author">Anthony Doerr</div>
+                <div class="_title">Think Like a Monk</div>
+                <div class="_price">$21.98</div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="book_card p-2">
+                <div class="book_image">
+                  <a href="/booking-details.html">
+
+                    <img src="./assest/images/books/book1.png" alt="" />
+                  </a>
+                </div>
+                <div class="_author">John Strass</div>
+                <div class="_title">Young Mental hea...</div>
+                <div class="_price">$19.00</div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="book_card p-2">
+                <div class="book_image">
+                  <a href="/booking-details.html">
+
+                    <img src="./assest/images/books/book2.png" alt="" />
+                  </a>
+                </div>
+                <div class="_author">Jay Shetty</div>
+                <div class="_title">Journey to Recove...</div>
+                <div class="_price">$21.98</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer_bg">
+    <div class="container pt-5">
+      <div class="row g-3">
+        <div class="col-lg-6 col-xl-4 ">
+          <div class="logo_wrapper d-flex align-items-center">
+            <div class="logo">
+              <img src="./assest/images/logo.png" alt="logo" />
+            </div>
+            <h5 class="logo_text m-0 ms-2 text-white">Bave.<span>INC</span></h5>
+          </div>
+          <p class="mb-0 mt-4 pe-3">
+            Discover everything we offer to support your journey—browse our
+            curated book collection, book a personalized consultation, or
+            participate in exclusive events
+          </p>
+          <div class="social_icon  mt-4  gap-3 d-flex">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+        <div class="col-lg-6 col-xl-2">
+          <h5 class="footer_h">Quick link</h5>
+          <span><img src="./assest/images/Group 5487.png" style="height: 8px; width: 40px;" alt=""></span>
+<ul class="footer_list mt-2">
+              <li><a href="Contact.html"><span class="me-2"><i class="fa-solid fa-angle-right"></i></span>Contact Us</a></li>
+              <li><a href="#"><span class="me-2"><i class="fa-solid fa-angle-right"></i></span>About us</a></li>
+              <li><a href="questions.html"><span class="me-2"><i class="fa-solid fa-angle-right"></i></span>FAQ</a></li>
+              <li><a href="Conversations.html"><span class="me-2"><i class="fa-solid fa-angle-right"></i></span>Membership </a> </li>
+            </ul>
+        </div>
+        <div class="col-lg-6 col-xl-3">
+          <h5 class="footer_h">Educational Resources</h5>
+          <span><img src="./assest/images/Group 5487.png" style="height: 8px; width: 40px;" alt=""></span>
+          <ul class="footer_list mt-2">
+            <li class="d-flex"><a href=""></a> <span class="me-2"><i class="fa-solid fa-angle-right"></i></span>Brain Training Programs
+              Article & videos <br>8 Feb, 2025</li>
+            <li class="d-flex"><a href="#"></a><span class="me-2"><i class="fa-solid fa-angle-right"></i></span>Mental Health Recovery
+              Tips<br> 8 Feb, 2025</li>
+          </ul>
+        </div>
+        <div class="col-lg-6 col-xl-3">
+          <h5 class="footer_h">Contact</h5>
+          <span><img src="./assest/images/Group 5487.png" style="height: 8px; width: 40px;" alt=""></span>
+
+          <ul class="footer_list mt-2">
+            <li class="d-flex">
+              <span class="me-3"><i class="fa-solid fa-location-dot" style=" font-size: 30px;"></i></span>
+              44 Danwers,  NY City, USA, 70-102
+            </li>
+            <li class="d-flex mt-3"><span class="me-3"><span><i class="fa-solid fa-envelope" style=" font-size: 26px;"></i></span></span>brandoninfo@demo.com</li>
+            <li class="d-flex mt-3"> <span class="me-3"><i class="fa-solid fa-phone" style=" font-size: 26px;"></i></span>01+000-000-000</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row Copyright py-3 mt-5">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+          <p class="m-0 p-0">
+            CBAVE.INC Copyright @ 2025 All rights reserved
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer_img">
+      <img src="./assest/images/footer.png" alt="">
+    </div>
+  </footer>
+  <!-- app js -->
+  <script src="./assest/js/app.js"></script>
+  <!-- bootstrap js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

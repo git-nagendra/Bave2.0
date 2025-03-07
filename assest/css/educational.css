@@ -1,0 +1,121 @@
+.Articles {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 17.54px;
+  letter-spacing: 0%;
+  color: #2f6fc0;
+}
+.educational_card {
+  position: relative;
+}
+
+.educational_image {
+  width: 100%;
+  height: 180px;
+  position: relative;
+}
+.edu_brige {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 22px;
+  width: 140px;
+  background: #8f8f8f;
+  overflow: hidden;
+}
+.edu_brige p {
+  font-family: Metropolis;
+  font-weight: 500;
+  font-size: 12.99px;
+  color: #fff;
+  margin-top: 3px !important;
+}
+.edu_brige::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #2f6fc0;
+  content: "";
+  height: 22px;
+  width: 10px;
+  z-index: 2;
+}
+.educational_image img {
+  height: 100%;
+  width: 100%;
+}
+.educational_text h6 {
+  font-family: Metropolis;
+  font-weight: 700;
+  font-size: 17.32px;
+  line-height: 25.98px;
+  letter-spacing: 0%;
+}
+.educational_text p {
+  font-weight: 400;
+  font-size: 12.99px;
+  line-height: 17.32px;
+  letter-spacing: 0%;
+}
+.video_player {
+  content: "";
+  position: absolute;
+  top: 34%;
+  left: 52%;
+  transform: translate(-50%, -34%);
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  background: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.493);
+}
+.video_player .fa-play {
+  font-size: 22px;
+  color: #6d727c;
+}
+.educational_title h1 {
+  font-family: Metropolis;
+  font-weight: 700;
+  font-size: 13px !important;
+  line-height: 24px;
+  letter-spacing: 0%;
+
+  color: black;
+}
+.linkedin,
+.Email,
+.Pin,
+.Tweet,
+.fac {
+  width: 150px;
+  height: 50px;
+  background: #4267b2 !important;
+  border-radius: 5px;
+  color: #fff;
+}
+.linkedin {
+  background: #0077b5 !important;
+}
+.Email {
+  background: #7d7d7d !important;
+}
+.Pin {
+  background: #cb2027 !important;
+}
+.Tweet {
+  background: #55acee !important;
+}
+.Mental_list ol li{
+  font-family: Metropolis;
+font-weight: 600;
+font-size: 20px;
+line-height: 34px;
+
+}
+/* .Mental_list ol li >p{
+  margin-bottom: 30px !important;
+} */

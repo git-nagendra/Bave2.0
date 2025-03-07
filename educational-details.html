@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bave.inc Booking</title>
+    <link rel="stylesheet" href="./assest/css/educational.css">
+    <link rel="stylesheet" href="./assest/css/service.css" />
+    <link rel="stylesheet" href="./assest/css/style.css" />
+    <!-- style css -->
+    <link rel="stylesheet" href="./assest/css/booking.css" />
+    <!-- Link Swiper's CSS -->
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- font-awesome css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <!-- style css -->
+  </head>
+
+  <body>
+    <div class="header page py-3">
+      <div class="container d-flex align-items-center justify-content-between">
+        <div class="logo_wrapper d-flex align-items-center">
+          <a href="index.html">
+            <div class="logo">
+              <img src="./assest/images/logo.png" alt="logo" />
+            </div>
+          </a>
+          <h5 class="logo_text m-0 ms-2">Bave.<span>INC</span></h5>
+        </div>
+        <div class="ham">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav>
+          <ul>
+            <li class="list-group-item">
+              <a href="booking-listing.html">Products</a>
+            </li>
+            <li class="list-group-item position-relative">
+              <a href="#" class="services-link active">
+                Services
+                <span><i class="fa-solid fa-chevron-down"></i></span>
+              </a>
+              <div class="sub_menu">
+                <ul>
+                  <li class="list-group-item">
+                    <a href="service.html" class="">Consultation</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="educational-resources.html" class="active">Educational Resources</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="Events.html">My Events</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <a href="Conversations.html">Membership</a>
+            </li>
+            <li class="list-group-item">
+              <a href="Contact.html">Contact Us</a>
+            </li>
+            <li class="list-group-item">
+              <img
+                src="./assest/images/cart.png"
+                style="height: 23px; width: 26px; cursor: pointer"
+                alt="cart"
+              />
+            </li>
+            <li class="list-group-item position-relative">
+              <a
+                href=""
+                class="text-decoration-none d-flex align-items-center"
+                style="letter-spacing: 0; color: #656565"
+              >
+                <div
+                  class="user_icon me-1 d-flex align-items-center justify-content-center"
+                >
+                  <p class="p-0 m-0 text-white" style="font-weight: 600">NP</p>
+                </div>
+                Vincent Artim
+                <span class="ms-1"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </a>
+              <div class="sub_menu pt-3 user_sub">
+                <a href="javascript:void(0)" class="remove_a_style">
+                  <div class="d-flex align-items-center">
+                    <div class="user_icon user_drop me-1 d-flex align-items-center justify-content-center">
+                      <p class="p-0 m-0 text-white" style="font-weight: 600;">NP</p>
+                    </div>
+                    <div class="user_name">
+                      <p class="m-0 p-0">Vincent Artim</p><span class="badge badge-soft-primary px-2 py-1" style="background: #CECECE; color: #0058FA;"
+                      >Pro
+                    </span>
+                      <p class="m-0 p-0 text_muted">vincentart@mail.com</p>
+                    </div>
+                  </div>
+                </a>
+                <div class="line my-3"></div>
+                <div class="user_list">
+                  <ul>
+                    <li onclick="changeActiveTab('tab1')"><a href="javascript:void(0)"><img src="./assest/images/settings.png" style="margin-right: 10px; height: 18px; width: 18px;" alt="">Profile Settings</a></li>
+                    <li onclick="changeActiveTab('tab2')"><a href="javascript:void(0)"><img src="./assest/images/Union.png" style="margin-right: 10px; height: 15px; width: 15px;" alt="">My Bookings</a></li>
+                    <li onclick="changeActiveTab('tab3')"><a href="javascript:void(0)"> <img src="./assest/images/Subtract.png" style="margin-right: 10px; height: 16px; width: 16px;" alt="">My Orders</a></li>
+                    <li><a href="javascript:void(0)">
+                      <img src="./assest/images/sign out.png" style="margin-right: 10px; height: 20px; width: 20px;" alt="">
+                      Sign Out</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <section class="">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-12">
+            <div class="Upcoming_detail_image">
+              <img src="./assest/images/Educational3.jpeg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12 mb-5">
+            <div class="social_mediya d-flex align-items-center justify-content-center flex-wrap gap-3">
+              <div class="fac d-flex align-items-center justify-content-center text-center">
+                <i class="fa-brands fa-facebook-f"></i><span class="ms-4">Share</span>
+              </div>
+              <div class="fac Tweet d-flex align-items-center justify-content-center text-center">
+                <i class="fa-brands fa-twitter"></i><span class="ms-4">Tweet</span>
+              </div>
+              <div class="fac  Pin d-flex align-items-center justify-content-center text-center">
+                <i class="fa-brands fa-pinterest"></i><span class="ms-4">Pin</span>
+              </div>
+              <div class="fac Email d-flex align-items-center justify-content-center text-center">
+                <i class="fa-solid fa-envelope"></i><span class="ms-4">Email</span>
+              </div>
+              <div class="fac linkedin d-flex align-items-center justify-content-center text-center">
+                <i class="fa-brands fa-linkedin"></i><span class="ms-4">Share</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <h2 class="educational_title mb-4">
+              Mindfulness Techniques for Recovery.
+            </h2>
+            <p class="text_muted">
+              Recovery is a deeply personal journey, and mindfulness can be a
+              powerful companion along the way. By practicing mindfulness, you
+              train your mind to stay present, reducing stress, easing anxiety,
+              and fostering self-awareness. Simple techniques like deep
+              breathing can bring immediate calm, helping to regulate emotions
+              and ground you in the moment. Body scan meditation allows you to
+              check in with yourself, releasing tension and reconnecting with
+              your physical sensations. Journaling mindfully encourages
+              reflection, helping you process emotions without judgment. Mindful
+              movement, such as yoga or even a slow, intentional walk, can
+              create a sense of balance and connection between mind and body.
+              Taking time for digital detoxes by stepping away from screens
+              helps reduce mental clutter, allowing space for clarity and inner
+              peace.
+            </p>
+            <p class="text_muted">Practicing gratitude—acknowledging even the smallest moments of joy or progress—can shift your perspective and reinforce a positive mindset. Mindfulness is not about achieving perfection; it’s about learning to be present, accepting yourself as you are, and finding peace in the process. By integrating these simple yet transformative techniques into your daily life, you can cultivate resilience, deepen your healing, and take control of your recovery journey—one mindful moment at a time.
+              4o</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer_bg">
+      <div class="container pt-5">
+        <div class="row g-3">
+          <div class="col-lg-6 col-xl-4">
+            <div class="logo_wrapper d-flex align-items-center">
+              <div class="logo">
+                <img src="./assest/images/logo.png" alt="logo" />
+              </div>
+              <h5 class="logo_text m-0 ms-2 text-white">
+                Bave.<span>INC</span>
+              </h5>
+            </div>
+            <p class="mb-0 mt-4 pe-3">
+              Discover everything we offer to support your journey—browse our
+              curated book collection, book a personalized consultation, or
+              participate in exclusive events
+            </p>
+            <div class="social_icon mt-4 gap-3 d-flex">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-square-twitter"></i>
+              <i class="fa-brands fa-square-instagram"></i>
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xl-2">
+            <h5 class="footer_h">Quick link</h5>
+            <span
+              ><img
+                src="./assest/images/Group 5487.png"
+                style="height: 8px; width: 40px"
+                alt=""
+            /></span>
+            <ul class="footer_list mt-2">
+              <li><a href="Contact.html"><span class="me-2"><i class="fa-solid fa-angle-right"></i></span>Contact Us</a></li>
+              <li><a href="#"><span class="me-2"><i class="fa-solid fa-angle-right"></i></span>About us</a></li>
+              <li><a href="questions.html"><span class="me-2"><i class="fa-solid fa-angle-right"></i></span>FAQ</a></li>
+              <li><a href="Conversations.html"><span class="me-2"><i class="fa-solid fa-angle-right"></i></span>Membership </a> </li>
+            </ul>
+          </div>
+          <div class="col-lg-6 col-xl-3">
+            <h5 class="footer_h">Educational Resources</h5>
+            <span
+              ><img
+                src="./assest/images/Group 5487.png"
+                style="height: 8px; width: 40px"
+                alt=""
+            /></span>
+            <ul class="footer_list mt-2">
+              <li class="d-flex">
+                <a href=""></a>
+                <span class="me-2"><i class="fa-solid fa-angle-right"></i></span
+                >Brain Training Programs Article & videos <br />8 Feb, 2025
+              </li>
+              <li class="d-flex">
+                <a href="#"></a
+                ><span class="me-2"
+                  ><i class="fa-solid fa-angle-right"></i></span
+                >Mental Health Recovery Tips<br />
+                8 Feb, 2025
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6 col-xl-3">
+            <h5 class="footer_h">Contact</h5>
+            <span
+              ><img
+                src="./assest/images/Group 5487.png"
+                style="height: 8px; width: 40px"
+                alt=""
+            /></span>
+
+            <ul class="footer_list mt-2">
+              <li class="d-flex">
+                <span class="me-3"
+                  ><i
+                    class="fa-solid fa-location-dot"
+                    style="font-size: 30px"
+                  ></i
+                ></span>
+                44 Danwers, NY City, USA, 70-102
+              </li>
+              <li class="d-flex mt-3">
+                <span class="me-3"
+                  ><span
+                    ><i
+                      class="fa-solid fa-envelope"
+                      style="font-size: 26px"
+                    ></i></span></span
+                >brandoninfo@demo.com
+              </li>
+              <li class="d-flex mt-3">
+                <span class="me-3"
+                  ><i
+                    class="fa-solid fa-phone"
+                    style="font-size: 26px"
+                  ></i></span
+                >01+000-000-000
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row Copyright py-3 mt-5">
+          <div class="col-12 d-flex justify-content-center align-items-center">
+            <p class="m-0 p-0">
+              CBAVE.INC Copyright @ 2025 All rights reserved
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer_img">
+        <img src="./assest/images/footer.png" alt="" />
+      </div>
+    </footer>
+    <!-- app js -->
+    <script src="./assest/js/app.js"></script>
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
