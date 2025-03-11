@@ -687,7 +687,6 @@ nav ul {
   border-radius: 10.73px;
   background: var(--white-color);
   box-shadow: 4.29px 10.73px 53.66px 0px #1212121a;
-  border: 2px solid red;
 }
 .Brandon_icon p {
   font-weight: 400;
@@ -1537,6 +1536,9 @@ vertical-align: middle;
   .hero_flex {
     flex-direction: column-reverse;
   }
+  .tab-content {
+    padding-left: 6px;
+}
   .Download {
     width: 131px;
     height: 130px;
