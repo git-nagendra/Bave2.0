@@ -94,7 +94,7 @@
                     <li onclick="changeActiveTab('tab1')"><a href="javascript:void(0)"><img src="./assest/images/settings.png" style="margin-right: 10px; height: 18px; width: 18px;" alt="">Profile Settings</a></li>
                     <li onclick="changeActiveTab('tab2')"><a href="javascript:void(0)"><img src="./assest/images/Union.png" style="margin-right: 10px; height: 15px; width: 15px;" alt="">My Bookings</a></li>
                     <li onclick="changeActiveTab('tab3')"><a href="javascript:void(0)"> <img src="./assest/images/Subtract.png" style="margin-right: 10px; height: 16px; width: 16px;" alt="">My Orders</a></li>
-                    <li><a href="javascript:void(0)">
+                    <li><a href="sign-in.html">
                       <img src="./assest/images/sign out.png" style="margin-right: 10px; height: 20px; width: 20px;" alt="">
                       Sign Out</a></li>
                   </ul>
@@ -116,37 +116,84 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-3 book-filter">
-          <ul class="book-filter-ul">
-            <li class="b-title">
-              Books by Age
-            </li>
-            <li class="active">
-              <a href="#">Teens</a>
-            </li>
-            <li>
-              <a href="#">Adults
-              </a>
-            </li>
-            <li>
-              <a href="#">Seniors</a>
-            </li>
-          </ul>
-          <div class="_divider"></div>
-          <ul class="book-filter-ul">
-            <li class="b-title">
-              Recovery Stage
-            </li>
-            <li>
-              <a href="#">Beginning</a>
-            </li>
-            <li>
-              <a href="#">In Progress
-              </a>
-            </li>
-            <li>
-              <a href="#">Fully Recovered</a>
-            </li>
-          </ul>
+          <div class="for_pc">
+            <ul class="book-filter-ul">
+              <li class="b-title">
+                Books by Age
+              </li>
+              <li class="active">
+                <a href="#">Teens</a>
+              </li>
+              <li>
+                <a href="#">Adults
+                </a>
+              </li>
+              <li>
+                <a href="#">Seniors</a>
+              </li>
+            </ul>
+            <div class="_divider"></div>
+            <ul class="book-filter-ul">
+              <li class="b-title">
+                Recovery Stage
+              </li>
+              <li>
+                <a href="#">Beginning</a>
+              </li>
+              <li>
+                <a href="#">In Progress
+                </a>
+              </li>
+              <li>
+                <a href="#">Fully Recovered</a>
+              </li>
+            </ul>
+          </div>
+          <div class="for_mobile" >
+            <ul class="book-filter-ul">
+              <li class="b-title " style="margin-left: 12px; padding: 0;">
+                Books by Age
+              </li>
+              <div class="px-2">
+                <!-- <div class="col-md-12 w-100">
+                  <div class="mb-3">
+                      <label for="phonenumberInput" class="form-label">Books by Age</label>
+                      <select class="form-select select_filter mb-3" aria-label="Default select example">
+                          <option selected=""> Beginning</option>
+                          <option value="1">In Progress</option>
+                          <option value="2">Fully Recovered</option>
+                      </select>
+                  </div>
+              </div> -->
+              <div class="mb-3">
+                <select id="bookAge" class="form-select custom-select">
+                    <option selected>Beginning</option>
+                    <option value="1">In Progress</option>
+                    <option value="2">Fully Recovered</option>
+                </select>
+            </div>
+              </div>
+            </ul>
+            <div class="_divider"></div>
+            <ul class="book-filter-ul">
+              <li class="b-title " style="margin-left: 12px; padding: 0;">
+                Recovery Stage
+              </li>
+              <div class="px-2">
+                <div class="col-md-12 w-100">
+                  <div class="mb-3">
+                    <select id="bookAge" class="form-select custom-select">
+                        <option selected>Beginning</option>
+                        <option value="1">In Progress</option>
+                        <option value="2">Fully Recovered</option>
+                    </select>
+                </div>
+              </div>
+              </div>
+            </ul>
+            
+            
+          </div>
         </div>
         <div class="col-lg-9">
           <div class="row">

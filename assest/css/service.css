@@ -138,6 +138,7 @@
   color: #333;
   font-weight: bold;
 }
+.trans,
 .not_active,
 .schedule-btn {
   background: #2f6fc0;
@@ -154,6 +155,19 @@
 }
 .schedule-btn:hover {
   background: #20569e;
+}
+.trans{
+  background: #ffffff;
+border: 1.22px solid #CBD5E1;
+color: #475569;
+font-family: Metropolis;
+font-weight: 700;
+font-size: 17.11px;
+line-height: 24.44px;
+letter-spacing: -0.6%;
+
+
+background: transparent;
 }
 .service_text h5 {
   font-family: Poppins;

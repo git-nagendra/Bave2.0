@@ -228,47 +228,17 @@ updateIndicator();
 
 
 
-// function changeActiveTab(target) {
-//   let currentUrl = window.location.href; // Get current full URL
-//   let baseUrl = window.location.origin + window.location.pathname; // Base URL without query params
-
-//   // Check if already on profile.html
-//   if (!baseUrl.includes("profile.html")) {
-//     window.location.href = `profile.html?tab=${target}`;
-//     return;
-//   }
-
-//   // Update the active tab when already on profile.html
-//   const targetTab = target;
-
-//   // Remove 'active' class from all buttons and tab panes
-//   document.querySelectorAll(".tab-button").forEach(button => button.classList.remove("active"));
-//   document.querySelectorAll(".tab-pane").forEach(tab => tab.classList.remove("active"));
-
-//   // Add 'active' class to the selected tab button and pane
-//   document.querySelector(`.tab-button[data-tab="${targetTab}"]`)?.classList.add("active");
-//   document.getElementById(targetTab)?.classList.add("active");
-
-//   // Update the URL without reloading
-//   history.pushState(null, "", `profile.html?tab=${target}`);
-// }
-
 function changeActiveTab(target) {
-  let currentUrl = window.location.href; // Full current URL
+  let currentUrl = window.location.href; // Get current full URL
   let baseUrl = window.location.origin + window.location.pathname; // Base URL without query params
 
-  // Auto-detect if running on GitHub Pages
-  let pathSegments = window.location.pathname.split("/").filter(seg => seg);
-  let repoName = pathSegments.length > 1 ? `/${pathSegments[0]}` : ""; // Extract GitHub repo if exists
-  let profilePage = `${repoName}/profile.html`;
-
-  // Redirect to profile.html if not already there
+  // Check if already on profile.html
   if (!baseUrl.includes("profile.html")) {
-    window.location.href = `${profilePage}?tab=${target}`;
+    window.location.href = `profile.html?tab=${target}`;
     return;
   }
 
-  // Update the active tab if already on profile.html
+  // Update the active tab when already on profile.html
   const targetTab = target;
 
   // Remove 'active' class from all buttons and tab panes
@@ -279,24 +249,9 @@ function changeActiveTab(target) {
   document.querySelector(`.tab-button[data-tab="${targetTab}"]`)?.classList.add("active");
   document.getElementById(targetTab)?.classList.add("active");
 
-  // Update URL without reloading
-  history.pushState(null, "", `${profilePage}?tab=${target}`);
+  // Update the URL without reloading
+  history.pushState(null, "", `profile.html?tab=${target}`);
 }
-
-// Function to activate the tab based on URL parameter
-function activateTabFromUrl() {
-  const params = new URLSearchParams(window.location.search);
-  const tab = params.get("tab");
-  if (tab) {
-    changeActiveTab(tab);
-  }
-}
-
-// Ensure correct tab is active when profile.html loads
-window.onload = activateTabFromUrl;
-
-
-
 
 // Function to activate the tab based on the URL parameter
 function activateTabFromUrl() {

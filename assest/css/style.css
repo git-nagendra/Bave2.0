@@ -102,8 +102,8 @@ body {
     max-width: 1400px !important;
   }
 }
-.remove_a_style{
-  text-decoration: none  !important;
+.remove_a_style {
+  text-decoration: none !important;
   color: initial !important;
 }
 
@@ -176,7 +176,7 @@ nav ul {
   z-index: 100;
   overflow: hidden;
 }
-.sub_menu li a{
+.sub_menu li a {
   text-transform: capitalize;
   text-decoration: initial !important;
   letter-spacing: 1px;
@@ -505,6 +505,7 @@ nav ul {
 .explore_image {
   height: 290px;
   border-radius: 6px;
+  overflow: hidden;
 }
 .explore_image img {
   height: 100%;
@@ -861,7 +862,7 @@ nav ul {
   list-style: none;
   margin-bottom: 12px;
 }
-.footer_list li a{
+.footer_list li a {
   color: #fff;
   text-decoration: none;
 }
@@ -1088,15 +1089,31 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
   border-color: #0056b3;
 }
 
-.form-select,
+.shiping_select,
 .form-control {
   padding: 8px !important;
   border-radius: 0 !important;
 }
+.for_mobile {
+  display: none;
+}
+.custom-select {
+  padding: 12px !important;
+}
+.select_filter {
+  padding: 12px !important;
+}
+.form-select:focus {
+  border-color: #c2c3c5 !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(200, 201, 202, 0.25) !important;
+}
+
 .for_border {
   border: none !important;
   border-bottom: 0.88px solid #8d8d8d !important;
 }
+
 .form-control:focus {
   box-shadow: initial !important;
 }
@@ -1186,7 +1203,6 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
   padding: 10px;
 } */
 
-
 .counter_wrapper .round {
   height: 25px;
   width: 25px;
@@ -1206,6 +1222,11 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
   text-align: center;
   border: none;
 }
+.counter{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
 /* Tab Buttons */
 .tab-buttons {
   display: flex;
@@ -1213,7 +1234,7 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
 .Profile-btn {
   border-radius: 10px 10px 0 0;
   display: inline-block !important;
-  background: #F4F4F4;
+  background: #f4f4f4;
 }
 
 .Profile-tab,
@@ -1241,9 +1262,9 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
   color: #3498db;
 }
 
-.Profile-tab.active{
-  color: #FFf;
-  background: #2F6FC0;
+.Profile-tab.active {
+  color: #fff;
+  background: #2f6fc0;
   border-bottom: initial !important;
 }
 /* Tab Content */
@@ -1295,12 +1316,12 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
   top: 8px;
   right: 8px;
 }
-.blur {
+.blur{
   position: absolute;
   content: "";
   top: 0;
   left: 0;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(4px);
   height: 100%;
   width: 100%;
 }
@@ -1308,6 +1329,12 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
   position: absolute;
   bottom: 10px;
   left: 10px;
+}
+.add_line h5{
+font-weight: 700;
+font-size: 15px;
+line-height: 21.09px;
+vertical-align: middle;
 }
 .video_icon .fa-play {
   height: 38px;
@@ -1337,6 +1364,7 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
   top: 50%;
   left: 38%;
   transform: translate(-28%, -50%);
+  z-index: 99;
 }
 .member_btn {
   border: none;
@@ -1394,7 +1422,6 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
   color: var(--white-color);
   width: 250px;
 }
-
 
 @media (max-width: 1400px) {
   .Guide {
@@ -1460,11 +1487,11 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
   .title h5 {
     font-size: 39px;
     line-height: 48px;
-}
- 
-.App {
-  font-size: 31.88px;
-}
+  }
+
+  .App {
+    font-size: 31.88px;
+  }
 
   .Availabilit {
     width: 216.77313232421875px;
@@ -1475,7 +1502,7 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
     border-radius: 10.73px;
     background: var(--white-color);
     box-shadow: 4.29px 10.73px 53.66px 0px #1212121a;
-}
+  }
   .Empower {
     font-size: 39px;
     line-height: 50.64px;
@@ -1514,13 +1541,19 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
   .Empower {
     font-size: 29px;
     line-height: 39.64px;
-}
-.Frequently {
-  font-size: 51px;
-  line-height: 60px;
+  }
+  .Frequently {
+    font-size: 51px;
+    line-height: 60px;
+  }
+  .for_pc {
+    display: none !important;
+  }
+  .for_mobile {
+    display: block;
+  }
 }
 
-}
 @media (max-width: 558px) {
   .Download {
     width: 110px;
@@ -1529,6 +1562,5 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
   .title h5 {
     font-size: 25px;
     line-height: 45px;
-}
-
+  }
 }

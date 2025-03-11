@@ -76,16 +76,17 @@ margin: auto;
 }
 .book-filter-ul li.active{
     background: #fff;
+    border-left: 2px solid #2F6FC0;
 }
 .book-filter-ul li a {
     font-weight: 500;
     font-size: 25px;
     text-decoration: none;
     color: #4D4D4D;
-
 }
 .book-filter-ul li.active a {
     color:#2F6FC0;
+   
 }
 .book-filter-ul .b-title {
     font-family: Metropolis;
