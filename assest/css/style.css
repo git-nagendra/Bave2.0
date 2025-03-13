@@ -110,6 +110,25 @@ body {
 .header {
   background: var(--primery-lite);
   border-bottom: 2px solid #e5e5e5;
+  transition: all 0.3s ease-in-out;
+}
+.fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  animation: slideDown 0.5s ease-in-out;
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .page {
   background: var(--white-color);
@@ -1223,7 +1242,7 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
   text-align: center;
   border: none;
 }
-.counter{
+.counter {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
@@ -1317,7 +1336,7 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
   top: 8px;
   right: 8px;
 }
-.blur{
+.blur {
   position: absolute;
   content: "";
   top: 0;
@@ -1331,11 +1350,11 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
   bottom: 10px;
   left: 10px;
 }
-.add_line h5{
-font-weight: 700;
-font-size: 15px;
-line-height: 21.09px;
-vertical-align: middle;
+.add_line h5 {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 21.09px;
+  vertical-align: middle;
 }
 .video_icon .fa-play {
   height: 38px;
@@ -1455,21 +1474,21 @@ vertical-align: middle;
   }
   .sub_menu {
     position: initial !important;
-    min-width:100%;
+    min-width: 100%;
     padding: 0px;
     box-shadow: initial;
-}
+  }
   .sub_menu ul {
     padding: 0;
   }
-  .sub_menu ul li{
+  .sub_menu ul li {
     padding: 0;
 
     overflow: hidden;
     margin-top: 5px;
   }
-  
-  .sub_menu ul li a{
+
+  .sub_menu ul li a {
     overflow: hidden;
     padding: 7px 10px;
     border-radius: 5px !important;
@@ -1490,7 +1509,6 @@ vertical-align: middle;
     font-size: 49px;
     line-height: 59.64px;
   }
- 
 }
 @media (max-width: 1000px) {
   .hero_heading {
@@ -1530,7 +1548,7 @@ vertical-align: middle;
     font-size: 39px;
     line-height: 50.64px;
   }
-  
+
   .custome {
     height: 200px;
     width: 100%;
@@ -1560,7 +1578,7 @@ vertical-align: middle;
   }
   .tab-content {
     padding-left: 6px;
-}
+  }
   .Download {
     width: 131px;
     height: 130px;
@@ -1572,7 +1590,7 @@ vertical-align: middle;
   .Frequently {
     font-size: 48px;
     line-height: 57px;
-}
+  }
   .for_pc {
     display: none !important;
   }

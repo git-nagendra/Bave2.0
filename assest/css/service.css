@@ -75,6 +75,8 @@
   margin: 32px 0;
 }
 
+
+
 .schedule-section {
   display: flex;
   gap: 25px;
@@ -120,6 +122,8 @@
   color: white;
   border-color: #2f6fc0;
 }
+
+
 
 .footer {
   display: flex;

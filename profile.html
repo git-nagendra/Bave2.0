@@ -420,7 +420,8 @@
                                               </div>
                                           </td>
                                           <td class="py-4">
-                                            <button class="schedule-btn not_active py-2 ms-2" class="btn">
+                                            <button class="schedule-btn not_active py-2 ms-2" class="btn" data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdrop">
                                               Join Live
                                             </button>
                                           </td>
@@ -449,7 +450,8 @@
                                             </div>
                                         </td>
                                         <td class="py-4">
-                                          <button class="schedule-btn  py-2 ms-2" class="btn">
+                                          <button class="schedule-btn  py-2 ms-2" class="btn" data-bs-toggle="modal"
+                                          data-bs-target="#staticBackdrop">
                                             Join Live
                                           </button>
                                         </td>
@@ -478,7 +480,8 @@
                                           </div>
                                       </td>
                                       <td class="py-4">
-                                        <button class="schedule-btn  py-2 ms-2" class="btn">
+                                        <button class="schedule-btn  py-2 ms-2" class="btn" data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop">
                                           Join Live
                                         </button>
                                       </td>
@@ -864,34 +867,43 @@
       const activeTab = params.get("tab");
       changeActiveTab(activeTab)
     </script>
+
+
+    <!-- Modal -->
+<div
+class="modal fade"id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"
+>
+<div class="modal-dialog modal-lg modal-dialog-centered">
+  <div class="modal-content join_app d-flex flex-row">
+    <div class="mobile_app d-flex align-items-center justify-content-center">
+      <div class="bobile_app_image">
+        <img src="./assest/images/group-phone.png" alt="">
+      </div>
+    </div>
+    <div class=" mobile_app_rite d-flex align-items-center justify-content-center flex-column">
+      <h5>Install the App to Join this <span style="color: #0058fa;">LIVE</span></h5>
+      <div class=" gap-2 mt-sm-4 mt-2 d-flex flex-sm-row flex-column">
+        <div class="app">
+          <img src="./assest/images/PngItem_1144050 3.png" alt="" />
+        </div>
+        <div class="app">
+          <img src="./assest/images/toppng 2.png" alt="" />
+        </div>
+      </div>
+      <button type="button" class="btn-close app-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
   </body>
 </html>
 
 
 
-<!-- Modal -->
-<div
-  class="modal fade"id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"
->
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content join_app d-flex flex-row">
-      <div class="mobile_app d-flex align-items-center justify-content-center">
-        <div class="bobile_app_image">
-          <img src="./assest/images/group-phone.png" alt="">
-        </div>
-      </div>
-      <div class=" mobile_app_rite d-flex align-items-center justify-content-center flex-column">
-        <h5>Install the App to Join this <span style="color: #0058fa;">LIVE</span></h5>
-        <div class=" gap-2 mt-sm-4 mt-2 d-flex flex-sm-row flex-column">
-          <div class="app">
-            <img src="./assest/images/PngItem_1144050 3.png" alt="" />
-          </div>
-          <div class="app">
-            <img src="./assest/images/toppng 2.png" alt="" />
-          </div>
-        </div>
-        <button type="button" class="btn-close app-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-    </div>
-  </div>
-</div>
